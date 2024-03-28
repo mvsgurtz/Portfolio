@@ -1,0 +1,140 @@
+.element {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 10px;
+    min-width: 100px;
+    /* margin: 0 auto; */
+    animation-name: stretch;
+    animation-duration: 3s; 
+    animation-timing-function: ease-in-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    border-radius: 10px;
+    gap: 5px;
+  }
+
+.element2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 10px;
+    gap: 5px;
+    min-width: 100px;
+    /* margin: 0 auto; */
+    animation-name: stretch-2;
+    animation-duration: 3s; 
+    animation-timing-function: ease-in-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    border-radius: 10px;
+}
+
+.element img {
+    width: 100px;
+    height: 100px;
+}
+
+.element2 img {
+    width: 100px;
+    height: 100px;
+}
+  
+.test {
+    border-radius: 10px;
+    gap: 2rem;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    max-width: 620px;
+    padding: 1rem;
+}
+
+@keyframes stretch {
+    0% {
+        opacity: .1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes stretch-2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .1;
+    }
+}
+
+  /* @keyframes stretch {
+    0% {
+      transform: scale(.5);
+      background-color: red;
+      opacity: 0;
+      border-radius: 100%;
+    }
+    50% {
+      background-color: orange;
+    }
+    100% {
+      transform: scale(1.1);
+      background-color: yellow;
+    }
+  }
+
+  @keyframes stretch-2 {
+    0% {
+        transform: scale(1.1);
+        background-color: yellow;
+    }
+    50% {
+      background-color: orange;
+    }
+    100% {
+        transform: scale(.5);
+        background-color: red;
+        opacity: 0;
+        border-radius: 100%;
+
+    }
+  }  */
+
+  body,
+  html {
+    height: 100%;
+  }
+  
+  body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  p {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
