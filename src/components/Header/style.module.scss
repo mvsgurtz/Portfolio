@@ -167,3 +167,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.languageBtn:active::after {
+  width: 25px;
+}

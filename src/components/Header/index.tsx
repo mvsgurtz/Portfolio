@@ -34,12 +34,19 @@ export const Header = () => {
                 className={style.darkModeToggle}
               />
               <label className={style.darkmodeBtn} htmlFor="dark-mode-toggle">
-                <img src={sun} alt=""  className={style.sunSVG}/>
-                <img src={moon} alt="" className={style.moonSVG}/> 
+                <img src={sun} alt="" className={style.sunSVG} />
+                <img src={moon} alt="" className={style.moonSVG} />
               </label>
 
-              <input type="checkbox" id ="language-Toggle"    className={style.languageToggle} />
-                <label className={style.languageBtn} htmlFor="language-Toggle"></label>
+              <input
+                type="checkbox"
+                id="language-Toggle"
+                className={style.languageToggle}
+              />
+              <label
+                className={style.languageBtn}
+                htmlFor="language-Toggle"
+              ></label>
             </div>
           </ul>
         </nav>
