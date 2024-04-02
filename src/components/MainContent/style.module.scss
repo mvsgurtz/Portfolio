@@ -1,0 +1,104 @@
+@mixin display($align: null, $justify: null, $direction: row, $gap: null) {
+    display: flex;
+    
+    @if $align != null {
+      align-items: $align;
+    }
+    
+    @if $justify != null {
+      justify-content: $justify;
+    }
+    
+    @if $direction != null {
+      flex-direction: $direction;
+    }
+    @if $gap != null {
+      gap: $gap;
+    }
+
+  }
+  
+  .main__content {
+    width: 75%;
+    margin: 0 auto;
+    gap: 5rem;
+    margin-top: 4rem;
+    @include display($direction: column);
+  }
+
+.intro__container {
+    @include display($direction: column, $gap: 3rem);
+
+    .intro__content {
+        @include display($justify: space-between);
+
+        .name__intro {
+            font-size: 2.7rem;
+        }
+
+        .stack__intro {
+            font-family: var(--font-family-accent);
+            font-size: 3rem;
+            background-image: linear-gradient(310deg, rgb(192, 192, 192),rgba(50,120,220,0.4),rgba(90,160,270,0.4), rgba(19, 37, 63, 0.4));
+            background-size: 400%;
+            background-clip: text;
+            color: transparent;
+            animation: bg-animation 5s infinite alternate;
+        }
+
+        .portfolio__intro {
+            @include display($align: flex-end, $direction: column); // Place the mixin call here
+          
+            span {
+            
+                &:nth-child(1) {
+                  font-size: var(--font-size-xl);
+                  font-weight: var(--font-bolder);
+                }
+            
+                &:nth-child(2) {
+                    font-size:  2rem;
+                    font-family: var(--font-family-special);
+                    font-weight: var(--font-regular);
+                }
+            
+                &:nth-child(3) {
+                    font-size: var(--font-size-xl);
+                    font-weight: var(--font-bolder);
+                }
+              }
+          }
+    }
+
+    .impactPhrase__intro {
+        font-size: var(--font-size-lg);
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+@keyframes bg-animation {
+    0% {
+      background-position: left;
+    }
+  
+    100% {
+      background-position: right;
+    }
+  }
+
+.aboutMe__content {
+
+}
+
+.hrdSkills__content {
+
+}
+
+.projects__content {
+
+}
+
+.sftSkills__content {
+
+}

@@ -1,0 +1,56 @@
+.background__circle {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 110px;
+    margin: auto;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 5;
+    box-shadow: inset 0px 10px 20px rgba(0,0,0,0.4), inset 0px -10px 20px rgba(255,255,255, 0.4);
+}
+
+.background__circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 4;
+    box-shadow: 0px 0px 5px 25px rgba(33, 42, 56, 0.5);
+    filter: blur(10px);
+}
+
+.complementary__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 110px;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    color: #333;
+    background-image: linear-gradient(310deg, rgb(192, 192, 192),rgba(50,120,220,0.4),rgba(90,160,270,0.4), rgba(19, 37, 63, 0.4), rgba(0,0,0,1));
+    background-size: 400%;
+    filter: blur(20px);
+    opacity: .2;
+    animation: bg-animation 5s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+      background-position: left;
+    }
+  
+    100% {
+      background-position: right;
+    }
+  }
