@@ -21,7 +21,7 @@
   .main__content {
     width: 75%;
     margin: 0 auto;
-    gap: 5rem;
+    gap: 10rem;
     margin-top: 4rem;
     @include display($direction: column);
   }
@@ -34,6 +34,7 @@
 
         .name__intro {
             font-size: 2.7rem;
+            
         }
 
         .stack__intro {
@@ -74,6 +75,8 @@
         font-size: var(--font-size-lg);
         font-weight: 500;
         text-align: center;
+        margin-inline: auto;
+        width: 70%;
     }
 }
 
@@ -87,9 +90,44 @@
     }
   }
 
-.aboutMe__content {
+  .aboutMe__container{
 
-}
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 30px;
+    .aboutMe__content {
+      @include display($justify: space-between);
+     
+       img {
+        height: 350px;
+        width: 350px;
+        animation: astronaut 3s infinite alternate ease-in-out;
+        margin: auto;
+       }
+       
+       p {
+         font-size: var(--font-size-md);
+         width: 50%;
+         line-height: 1.4;
+         letter-spacing: 1.3px;
+         margin-block: auto;
+      }
+     }
+     
+  }
+
+
+  @keyframes astronaut {
+    0% {
+      position: relative;
+      top: -10px;
+    }
+    100% {
+      position: relative;
+      top: 40px;
+    }
+    
+  }
 
 .hrdSkills__content {
 
