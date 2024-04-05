@@ -1,6 +1,13 @@
 import { BackgroundAnimation } from "./BackgroundAnimation";
 import style from "./style.module.scss";
 import astronaut from "../../assets/astronautByMVS.svg"
+import alien from "../../assets/AlienByMVS.svg"
+import nav from "../../assets/NavByMVS.svg"
+import { HardSkill } from "./HardSkill";
+import "../../assets/SkillIcons/index" ; 
+import { JS, TS, css, express, figma, git, github, html, insomnia, java, junit, mysql, node, postgre, prisma, python, react, sass, selenium } from "../../assets/SkillIcons/index";
+
+
 
 export const MainContent = () => {
   return (
@@ -42,17 +49,34 @@ export const MainContent = () => {
 
       <section className={style.hrdSkills__content}>
         <h1>Hard Skills</h1>
+        <img src={alien} alt="" />
         <div>
-          <div>
-            <img src="" alt="" />
-            <p></p>
-          </div>
+          <HardSkill skillName = {"HTML"} skillImg = {html}/>
+          <HardSkill skillName = {"CSS"} skillImg = {css}/>
+          <HardSkill skillName = {"JavaScript"} skillImg = {JS}/>
+          <HardSkill skillName = {"TypeScript"} skillImg = {TS}/>
+          <HardSkill skillName = {"React"} skillImg = {react}/>
+          <HardSkill skillName = {"Node.JS"} skillImg = {node}/>
+          <HardSkill skillName = {"SASS"} skillImg = {sass}/>
+          <HardSkill skillName = {"EXPRESS"} skillImg = {express}/>
+          <HardSkill skillName = {"PostgreSQL"} skillImg = {postgre}/>
+          <HardSkill skillName = {"Prisma"} skillImg = {prisma}/>
+          <HardSkill skillName = {"Figma"} skillImg = {figma}/>
+          <HardSkill skillName = {"Java"} skillImg = {java}/>
+          <HardSkill skillName = {"mySQL"} skillImg = {mysql}/>
+          <HardSkill skillName = {"Selenium"} skillImg = {selenium}/>
+          <HardSkill skillName = {"Insomnia"} skillImg = {insomnia}/>
+          <HardSkill skillName = {"JUnit"} skillImg = {junit}/>
+          <HardSkill skillName = {"Python"} skillImg = {python}/>
+          <HardSkill skillName = {"GitHub"} skillImg = {github}/>
+          <HardSkill skillName = {"Git"} skillImg = {git}/>
         </div>
       </section>
 
       <section className={style.projects__content}>
         <div>
           <h1>Projects</h1>
+          <img src={nav} alt="" />
           <div>
             <div>
               <div>
