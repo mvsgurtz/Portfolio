@@ -5,13 +5,14 @@ import alien from "../../assets/AlienByMVS.svg"
 import nav from "../../assets/NavByMVS.svg"
 import { HardSkill } from "./HardSkill";
 import "../../assets/SkillIcons/index" ; 
-import { JS, TS, css, express, figma, git, github, html, insomnia, java, junit, mysql, node, postgre, prisma, python, react, sass, selenium } from "../../assets/SkillIcons/index";
+// import { JS, TS, css, express, figma, git, github, html, insomnia, java, junit, mysql, node, postgre, prisma, python, react, sass, selenium } from "../../assets/SkillIcons/index";
 
 
 
 export const MainContent = () => {
   return (
     <div className={style.main__content}>
+      
       <section className={style.intro__container}>
         <div className={style.intro__content}>
           <div>
@@ -36,7 +37,9 @@ export const MainContent = () => {
 
       <section className={style.aboutMe__container}>
         <div className={style.aboutMe__content}>
-          <img src={astronaut} alt="" />
+          <div className={style.astronaut}>
+            <img src={astronaut} alt="" />
+          </div>
           <p>
             Tenho 20 anos e estou cursando o terceiro semestre de Ciência da
             Computação, sempre tive facilidade e gosto pela área da tecnologia,
@@ -47,11 +50,15 @@ export const MainContent = () => {
         </div>
       </section>
 
-      <section className={style.hrdSkills__content}>
+      <section className={style.hrdSkills__container}>
         <h1>Hard Skills</h1>
-        <img src={alien} alt="" />
-        <div>
-          <HardSkill skillName = {"HTML"} skillImg = {html}/>
+        <div className={style.alien}>
+          <img src={alien} alt="" />
+        </div>
+        
+        <div className={style.hrdSkills__content}>
+          <HardSkill />
+          {/* <HardSkill skillName = {"HTML"} skillImg = {html}/>
           <HardSkill skillName = {"CSS"} skillImg = {css}/>
           <HardSkill skillName = {"JavaScript"} skillImg = {JS}/>
           <HardSkill skillName = {"TypeScript"} skillImg = {TS}/>
@@ -69,7 +76,7 @@ export const MainContent = () => {
           <HardSkill skillName = {"JUnit"} skillImg = {junit}/>
           <HardSkill skillName = {"Python"} skillImg = {python}/>
           <HardSkill skillName = {"GitHub"} skillImg = {github}/>
-          <HardSkill skillName = {"Git"} skillImg = {git}/>
+          <HardSkill skillName = {"Git"} skillImg = {git}/> */}
         </div>
       </section>
 

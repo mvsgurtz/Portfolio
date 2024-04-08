@@ -24,6 +24,7 @@
     gap: 10rem;
     margin-top: 4rem;
     @include display($direction: column);
+    
   }
 
 .intro__container {
@@ -73,6 +74,7 @@
 
     .impactPhrase__intro {
         font-size: var(--font-size-lg);
+        z-index: 10;
         font-weight: 500;
         text-align: center;
         margin-inline: auto;
@@ -92,21 +94,74 @@
 
   .aboutMe__container{
 
-    border: 1px solid white;
-    border-radius: 20px;
+    // border: 1px solid white;
+    // border-radius: 20px;
+    box-shadow: -0px -0px 5px 3px rgba(30, 39, 51, 0.4);
+    border-radius: 5px;
     padding: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      // background: rgb(255,255,255);
+
+      filter: blur(10px);
+      opacity: .2;
+    }
     .aboutMe__content {
       @include display($justify: space-between);
+
+      .astronaut {
+        @include display($justify: center);
+        position: relative;
+        margin: auto;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          margin-top: 45px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 300px;
+          width: 300px;
+          background-color: rgb(127, 175, 247);
+          border-radius: 50%;
+          animation: astronaut 3s infinite alternate ease-in-out;
+          filter: blur(50px);
+          opacity: .2;
+          position: absolute;
+          // box-shadow: 10px 10px 10px 10px aqua;
+        }
+      }
+
+    
      
        img {
-        height: 350px;
-        width: 350px;
+        height: 400px;
+        width: 400px;
+        position: relative;
         animation: astronaut 3s infinite alternate ease-in-out;
         margin: auto;
+
+        &::after {
+
+        }
        }
-       
+
        p {
          font-size: var(--font-size-md);
+         padding: .5rem;
+         border-radius: 5px;
+         text-align: center;
          width: 50%;
          line-height: 1.4;
          letter-spacing: 1.3px;
@@ -119,23 +174,64 @@
 
   @keyframes astronaut {
     0% {
-      position: relative;
+      // position: relative;
       top: -10px;
     }
     100% {
-      position: relative;
+      // position: relative;
       top: 40px;
     }
     
   }
 
-.hrdSkills__content {
+.hrdSkills__container {
+  position: relative;
+  @include display( $justify: center,$direction: column, $gap: 5rem);
+  // box-shadow: -0px -0px 5px 3px rgba(30, 39, 51, 0.4);
+  border-radius: 5px;
+  box-shadow: -0px -0px 5px 3px rgba(30, 39, 51, 0.4);
+  border-radius: 5px;
+  // padding: 30px;
 
-  img {
+  h1 {
+    font-size: var(--font-size-xl);
+    margin-top: .2rem;
+  }
+
+  .alien {
     height: 350px;
     width: 350px;
     animation: astronaut 3s infinite alternate ease-in-out;
     margin: auto;
+    position: absolute;
+    right: 0;
+    bottom: 105rem;
+    
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      // top: rem;
+      left: 7rem;
+      right: 0;
+      margin-top: 2.5rem;
+      height: 200px;
+      width: 200px;
+      background-color: rgb(127, 247, 147);
+      border-radius: 50%;
+      animation: astronaut 3s infinite alternate ease-in-out;
+      filter: blur(50px);
+      opacity: .2;
+      position: absolute;
+      // box-shadow: 10px 10px 10px 10px aqua;
+    }
+  }
+
+   .hrdSkills__content {
+      width: 100%;
+
+      // background-color: green;
+
    }
    
 }
@@ -148,6 +244,7 @@
     width: 350px;
     animation: astronaut 3s infinite alternate ease-in-out;
     margin: auto;
+    
    }
    
 

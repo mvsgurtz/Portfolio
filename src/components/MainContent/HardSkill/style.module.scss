@@ -1,0 +1,102 @@
+
+
+.skill__container {
+    display: grid;
+    grid-template-columns: repeat(14, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: .25rem;
+    width: fit-content;
+    // margin-top: 70px;
+
+    div {
+        width: 100px;
+        height: 100px;
+        grid-column: span 2;
+        // grid-row: span 1;
+        // background-color: aqua;
+        // z-index: 1;
+        position: relative;
+        display: flex;
+        padding-left: 1.5rem;
+        padding-top: .95rem;
+        align-items: end;
+        justify-content: center;
+        // filter: drop-shadow(0px 0px 100px rgb(198, 255, 255));
+
+        &:nth-of-type(1) {
+            grid-column: 2 / span 2;
+            // grid-row: 1 / span 1;
+        }
+        &:nth-of-type(14) {
+            grid-column: 2 / span 2;
+            // grid-row: 1 / span 1;
+        }
+
+        p.skill__name {
+            position: absolute;
+            margin:  auto;
+            margin-block: -30px;
+            font-weight: var(--font-bold);
+            font-size: var(--font-size-md);
+            visibility: hidden;
+            // margin-right: 50%;
+        }
+
+
+
+        &:hover::before {
+            clip-path: path('M 0 0 C 100 0 100 0 200 0 C 200 53.301 200 40.853 200 80 C 200 100 200 100 200 80 C 200 145.012 200 154.088 200 200 C 100 200 100 200 0 200 C 0 168.054 0 156.627 0 120.063 C 0 100 0 100 0 80 Z');
+            z-index: 200;
+            opacity: 1;
+
+            p {
+                visibility: visible;
+            }
+            
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: grid;
+            top:-35px;
+            bottom: 0;
+            left: -25px;
+            right: 0;
+            width: 200px;
+            height: 200px;
+
+            background-color: rgba(159, 217, 255, .4);
+            opacity: .5;
+            transition: clip-path 200ms;
+            clip-path: path('M 80 20 C 100 0 100 0 120 20 C 140 40 160 60 180 80 C 200 100 200 100 180 120 C 160 140 140 160 120 180 C 100 200 100 200 80 180 C 60 160 40 140 20 120 C 0 100 0 100 20 80 Z');
+        }
+    }
+
+        img {
+            width: 100px;
+            height: 100px;
+            max-width: 100%;
+            object-fit: cover;
+            grid-column: span 2;
+            z-index: 1;
+
+            &:hover {
+                z-index: 200;
+                // background-color: green;
+            }
+
+        }
+}
+
+.skill__container:hover > div > img {
+    filter: brightness(.0) saturate(.5);
+}
+.skill__container > div:hover img {
+    filter: brightness(1) saturate(1);
+    
+}
+.skill__container > div:hover p {
+    visibility: visible;
+    
+}
