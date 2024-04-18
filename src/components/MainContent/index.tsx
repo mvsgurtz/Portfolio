@@ -1,17 +1,14 @@
 import { BackgroundAnimation } from "./BackgroundAnimation";
 import style from "./style.module.scss";
-import astronaut from "../../assets/astronautByMVS.svg"
-import alien from "../../assets/AlienByMVS.svg"
-import nav from "../../assets/NavByMVS.svg"
 import { HardSkill } from "./HardSkill";
 import "../../assets/SkillIcons/index" ; 
-// import { JS, TS, css, express, figma, git, github, html, insomnia, java, junit, mysql, node, postgre, prisma, python, react, sass, selenium } from "../../assets/SkillIcons/index";
-
-
 
 export const MainContent = () => {
   return (
+    <>
+    <BackgroundAnimation />
     <div className={style.main__content}>
+      
       
       <section className={style.intro__container}>
         <div className={style.intro__content}>
@@ -33,57 +30,42 @@ export const MainContent = () => {
         </span>
       </section>
 
-      <BackgroundAnimation />
+
 
       <section className={style.aboutMe__container}>
         <div className={style.aboutMe__content}>
-          <div className={style.astronaut}>
-            <img src={astronaut} alt="" />
-          </div>
-          <p>
+          {/* <p>
             Tenho 20 anos e estou cursando o terceiro semestre de Ciência da
             Computação, sempre tive facilidade e gosto pela área da tecnologia,
             mas já me dediquei muito ao esporte, nele aprendi a disciplina,
             foco, espirito de liderança e como a coletividade auxilia no
             trabalho com excelência.
-          </p>
+                        
+                        
+          </p> */}
         </div>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
       </section>
 
       <section className={style.hrdSkills__container}>
         <h1>Hard Skills</h1>
-        <div className={style.alien}>
-          <img src={alien} alt="" />
-        </div>
         
         <div className={style.hrdSkills__content}>
           <HardSkill />
-          {/* <HardSkill skillName = {"HTML"} skillImg = {html}/>
-          <HardSkill skillName = {"CSS"} skillImg = {css}/>
-          <HardSkill skillName = {"JavaScript"} skillImg = {JS}/>
-          <HardSkill skillName = {"TypeScript"} skillImg = {TS}/>
-          <HardSkill skillName = {"React"} skillImg = {react}/>
-          <HardSkill skillName = {"Node.JS"} skillImg = {node}/>
-          <HardSkill skillName = {"SASS"} skillImg = {sass}/>
-          <HardSkill skillName = {"EXPRESS"} skillImg = {express}/>
-          <HardSkill skillName = {"PostgreSQL"} skillImg = {postgre}/>
-          <HardSkill skillName = {"Prisma"} skillImg = {prisma}/>
-          <HardSkill skillName = {"Figma"} skillImg = {figma}/>
-          <HardSkill skillName = {"Java"} skillImg = {java}/>
-          <HardSkill skillName = {"mySQL"} skillImg = {mysql}/>
-          <HardSkill skillName = {"Selenium"} skillImg = {selenium}/>
-          <HardSkill skillName = {"Insomnia"} skillImg = {insomnia}/>
-          <HardSkill skillName = {"JUnit"} skillImg = {junit}/>
-          <HardSkill skillName = {"Python"} skillImg = {python}/>
-          <HardSkill skillName = {"GitHub"} skillImg = {github}/>
-          <HardSkill skillName = {"Git"} skillImg = {git}/> */}
         </div>
       </section>
 
       <section className={style.projects__content}>
         <div>
           <h1>Projects</h1>
-          <img src={nav} alt="" />
           <div>
             <div>
               <div>
@@ -109,5 +91,6 @@ export const MainContent = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };

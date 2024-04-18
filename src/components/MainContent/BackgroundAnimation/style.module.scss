@@ -1,54 +1,198 @@
 .background__circle {
-    width: 300px;
-    position: absolute;
-    top: 110px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 300px;
-    border-radius: 50%;
-    z-index: 5;
-    box-shadow: inset 0px 10px 20px rgba(0,0,0,0.4), inset 0px -10px 20px rgba(255,255,255, 0.4);
+  width: 150px;
+  position: absolute;
+  top: 90px;
+  left: -250px;
+  right: 0;
+  margin: auto;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.4),
+    inset 0px -10px 20px rgba(255, 255, 255, 0.4);
 }
 
 .background__circle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    z-index: 4;
-    box-shadow: 0px 0px 5px 25px rgba(33, 42, 56, 0.5);
-    filter: blur(10px);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 4;
+  box-shadow: 0px 0px 5px 25px rgba(33, 42, 56, 0.5);
+  filter: blur(10px);
 }
 
 .complementary__circle {
-    position: absolute;
-    top: 110px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    color: #333;
-    background-image: linear-gradient(310deg, rgb(192, 192, 192),rgba(50,120,220,0.4),rgba(90,160,270,0.4), rgba(19, 37, 63, 0.4), rgba(0,0,0,1));
-    background-size: 400%;
-    filter: blur(20px);
-    opacity: .2;
-    animation: bg-animation 5s infinite alternate;
+  position: absolute;
+  top: 110px;
+  left: -250px;
+  right: 0;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #333;
+  background-image: linear-gradient(
+    310deg,
+    rgb(192, 192, 192),
+    rgba(50, 120, 220, 0.4),
+    rgba(90, 160, 270, 0.4),
+    rgba(19, 37, 63, 0.4),
+    rgba(0, 0, 0, 1)
+  );
+  background-size: 400%;
+  filter: blur(20px);
+  opacity: 0.2;
+  animation: bg-animation 5s infinite alternate;
 }
 
 @keyframes bg-animation {
-    0% {
-      background-position: left;
-    }
-  
-    100% {
-      background-position: right;
-    }
+  0% {
+    background-position: left;
   }
+
+  100% {
+    background-position: right;
+  }
+}
+
+.background__content {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+    0deg,
+    #be6966 0%,
+    #032332 54%,
+    #03080a 100%
+  );
+
+  .lighthouse {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 180px;
+    left: 1200px;
+    z-index: 3;
+  }
+
+  .lighthouseLight {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 398px;
+    right: 404px;
+    z-index: 3;
+    background-color: #be6966;
+    box-shadow: 0 0 3px 3px #be6966;
+    border-radius: 50%;
+    animation: lightFlick 20s linear infinite;
+  }
+
+  .lighthouseLightCone {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 280px;
+    left: 1327px;
+    z-index: 5;
+    opacity: .5;
+    filter: blur(15px);
+    animation: lightBeam 10s infinite ease-in-out;
+  }
+}
+
+
+
+.waves {
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  // top: 200px;
+  // background-color: rgba(10,10,10,.2);
+  bottom: 03rem;
+
+  .wave__light {
+    z-index: 1;
+    background-image: url("../../../assets/LightWave_1.svg");
+    background-position-x: center;
+    animation: waveSwing 15s infinite ease-in-out;
+    height: inherit;
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    // width: 100vw;
+   
+    
+  }
+  .wave__superLight {
+    z-index: 2;
+    background-image: url("../../../assets/SuperLightWave_1.svg");
+    background-position-x: center;
+    animation: waveSwing 15s infinite reverse;
+    height: inherit;
+    position: absolute;
+    width: inherit;
+  }
+  .wave__dark {
+    z-index: 4;
+    background-image: url("../../../assets/DarkWave_1.svg");
+    background-position-x: center;
+    animation: waveSwing 20s infinite linear;
+    height: inherit;
+    position: absolute;
+    width: inherit;
+  }
+}
+
+@keyframes waveSwing {
+  0% {
+    background-position-x: 0vw;
+  }
+  // 50% {
+  //   background-position-x: 100vw;
+  // }
+  100% {
+    background-position-x: 71vw;
+  }
+
+}
+
+@keyframes lightFlick {
+  0% {
+    box-shadow: 0 0 3px 3px #be6966;
+  }
+  50% {
+    background-color: #eb443e;
+    box-shadow: 0 0 3px 3px #eb443e;
+  }
+  100% {
+    box-shadow: 0 0 3px 3px #be6966;
+  }
+}
+
+@keyframes lightBeam {
+  0% {
+    transform: scaleX(1);
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(-1);
+  }
+}
