@@ -71,8 +71,8 @@
   background-image: linear-gradient(
     0deg,
     #be6966 0%,
-    #032332 54%,
-    #03080a 100%
+    #032332 45%,
+    #03080a 90%
   );
 
   .lighthouse {
@@ -144,7 +144,7 @@
   }
   .wave__dark {
     z-index: 4;
-    background-image: url("../../../assets/DarkWave_1.svg");
+    background-image: url("../../../assets/DarkWave.svg");
     background-position-x: center;
     animation: waveSwing 20s infinite linear;
     height: inherit;

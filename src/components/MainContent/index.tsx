@@ -8,8 +8,7 @@ export const MainContent = () => {
     <>
     <BackgroundAnimation />
     <div className={style.main__content}>
-      
-      
+
       <section className={style.intro__container}>
         <div className={style.intro__content}>
           <div>
@@ -34,7 +33,8 @@ export const MainContent = () => {
 
       <section className={style.aboutMe__container}>
         <div className={style.aboutMe__content}>
-          {/* <p>
+          <h1>About Me</h1>
+          <p>
             Tenho 20 anos e estou cursando o terceiro semestre de Ciência da
             Computação, sempre tive facilidade e gosto pela área da tecnologia,
             mas já me dediquei muito ao esporte, nele aprendi a disciplina,
@@ -42,17 +42,8 @@ export const MainContent = () => {
             trabalho com excelência.
                         
                         
-          </p> */}
+          </p>
         </div>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
       </section>
 
       <section className={style.hrdSkills__container}>

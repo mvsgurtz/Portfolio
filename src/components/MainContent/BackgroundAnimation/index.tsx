@@ -17,7 +17,6 @@ export const BackgroundAnimation = () => {
                     <div className={style.wave__superLight}></div>
                     <div className={style.wave__dark}></div>
                 </div>
-
         </div>
         <div className={style.background__circle}>
         
