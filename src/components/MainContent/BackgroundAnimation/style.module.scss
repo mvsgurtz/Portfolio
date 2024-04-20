@@ -8,8 +8,8 @@
   height: 150px;
   border-radius: 50%;
   z-index: 5;
-  box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.4),
-    inset 0px -10px 20px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.8),
+    inset 0px -10px 20px rgba(255, 255, 255, 0.6);
 }
 
 .background__circle::before {
@@ -23,7 +23,7 @@
   height: 150px;
   border-radius: 50%;
   z-index: 4;
-  box-shadow: 0px 0px 5px 25px rgba(33, 42, 56, 0.5);
+  box-shadow: 0px 0px 5px 25px rgba(33, 42, 56, 0.4);
   filter: blur(10px);
 }
 
@@ -63,51 +63,82 @@
 
 .background__content {
   position: absolute;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  // margin: auto;
   width: 100%;
   height: 80%;
   top: 0;
   z-index: -1;
-  background-image: linear-gradient(
-    0deg,
-    #be6966 0%,
-    #032332 45%,
-    #03080a 90%
-  );
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(3,35,50,1) 45%, rgba(66,90,101,1) 70%);
+  
 
-  .lighthouse {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 180px;
-    left: 1200px;
-    z-index: 3;
+  .lighthouse__container {
+    position: relative;
+    right: 12.5vw;
+    bottom: 0;
+    width: 70vw;
+    height: 70vw;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 450px;
+    max-height: 450px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 6rem;
+
+    .lighthouse {
+      position: absolute;
+      width: 70vw;
+      height: 70vw;
+      min-width: 200px;
+      min-height: 200px;
+      max-width: 450px;
+      max-height: 450px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      z-index: 3;
+    }
+  
+    .lighthouseLight {
+      position: absolute;
+      max-width: 15px;
+      max-height: 15px;
+      width: 1%;
+      height: 1%;
+      right: 5vw;
+      top: 44.5%;
+      right: 48.5%;
+      z-index: 3;
+      background-color: #be6966;
+      box-shadow: 0 0 3px 3px #be6966;
+      border-radius: 50%;
+      animation: lightFlick 20s linear infinite;
+    }
+  
+    .lighthouseLightCone {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      max-width: 250px;
+      max-height: 250px;
+      width: 50%;
+      height: 50%;
+      right: 5vw;
+      top: 20%;
+      right: 24.5%;
+      z-index: 5;
+      opacity: .5;
+      filter: blur(15px);
+      animation: lightBeam 10s infinite ease-in-out;
+    }
   }
 
-  .lighthouseLight {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 398px;
-    right: 404px;
-    z-index: 3;
-    background-color: #be6966;
-    box-shadow: 0 0 3px 3px #be6966;
-    border-radius: 50%;
-    animation: lightFlick 20s linear infinite;
-  }
 
-  .lighthouseLightCone {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    top: 280px;
-    left: 1327px;
-    z-index: 5;
-    opacity: .5;
-    filter: blur(15px);
-    animation: lightBeam 10s infinite ease-in-out;
-  }
 }
 
 
@@ -116,40 +147,49 @@
   width: 100%;
   height: 10rem;
   position: absolute;
-  // top: 200px;
-  // background-color: rgba(10,10,10,.2);
   bottom: 03rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .wave__light {
     z-index: 1;
-    background-image: url("../../../assets/LightWave_1.svg");
+    background-image: url("../../../assets/LightWave.svg");
     background-position-x: center;
-    animation: waveSwing 15s infinite ease-in-out;
+    animation: waveSwing 13s infinite linear;
+
+    background-repeat: no-repeat;
     height: inherit;
     position: absolute;
-    bottom: 0;
-    width: inherit;
-    // width: 100vw;
-   
+    width: 100%;
+    background-size: 66% auto;
+    background-repeat: repeat-x;
     
   }
   .wave__superLight {
-    z-index: 2;
-    background-image: url("../../../assets/SuperLightWave_1.svg");
+    z-index: 4;
+    background-image: url("../../../assets/SuperLightWave.svg");
     background-position-x: center;
-    animation: waveSwing 15s infinite reverse;
+    animation: waveSwing 20s infinite reverse;
+    background-repeat: no-repeat;
     height: inherit;
     position: absolute;
-    width: inherit;
+    width: 100%;
+    background-size: 66% auto;
+    background-repeat: repeat-x;
+    opacity: .6;
   }
   .wave__dark {
-    z-index: 4;
+    z-index: 5;
     background-image: url("../../../assets/DarkWave.svg");
     background-position-x: center;
-    animation: waveSwing 20s infinite linear;
+    animation: waveSwing 30s infinite linear;
+    background-repeat: no-repeat;
     height: inherit;
     position: absolute;
-    width: inherit;
+    width: 100%;
+    background-size: 66% auto;
+    background-repeat: repeat-x;
   }
 }
 
@@ -157,12 +197,10 @@
   0% {
     background-position-x: 0vw;
   }
-  // 50% {
-  //   background-position-x: 100vw;
-  // }
   100% {
-    background-position-x: 71vw;
+    background-position-x: 66vw;
   }
+
 
 }
 

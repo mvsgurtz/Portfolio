@@ -32,22 +32,21 @@ export const MainContent = () => {
 
 
       <section className={style.aboutMe__container}>
+        
         <div className={style.aboutMe__content}>
-          <h1>About Me</h1>
+          <h1 className="highlight__font">About Me</h1>
           <p>
             Tenho 20 anos e estou cursando o terceiro semestre de Ciência da
             Computação, sempre tive facilidade e gosto pela área da tecnologia,
             mas já me dediquei muito ao esporte, nele aprendi a disciplina,
             foco, espirito de liderança e como a coletividade auxilia no
-            trabalho com excelência.
-                        
-                        
+            trabalho com excelência.       
           </p>
         </div>
       </section>
 
       <section className={style.hrdSkills__container}>
-        <h1>Hard Skills</h1>
+        <h1 className="highlight__font">Hard Skills</h1>
         
         <div className={style.hrdSkills__content}>
           <HardSkill />
@@ -56,7 +55,7 @@ export const MainContent = () => {
 
       <section className={style.projects__content}>
         <div>
-          <h1>Projects</h1>
+          <h1 className="highlight__font">Projects</h1>
           <div>
             <div>
               <div>
@@ -75,7 +74,7 @@ export const MainContent = () => {
       </section>
 
       <section className={style.sftSkills__content}>
-        <h1>Soft Skills</h1>
+        <h1 className="highlight__font">Soft Skills</h1>
         <div>
           <img src="" alt="" />
           <p></p>
