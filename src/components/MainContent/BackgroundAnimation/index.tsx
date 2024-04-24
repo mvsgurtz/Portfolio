@@ -1,6 +1,6 @@
 import style from "./style.module.scss";
-import lighthouse from "../../../assets/lighthouse.svg";
-import lighthouseLightCone from "../../../assets/lighthouseLightCone (2).svg";
+import lighthouse from "../../../assets/Background/lighthouse.svg";
+import lighthouseLightCone from "../../../assets/Background/lighthouseLightCone (2).svg";
 
 export const BackgroundAnimation = () => {
     return (
