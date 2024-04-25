@@ -19,9 +19,8 @@
 
 .main__content {
   position: relative;
-  gap: 10rem;
   margin-top: 4rem;
-  @include display($direction: column);
+  @include display($direction: column, $gap:9rem);
 }
 
 
