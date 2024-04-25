@@ -1,0 +1,31 @@
+@import "../../../styles/globalstyles.scss";
+
+.projects__content {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+    @include display($justify: center, $direction: column, $gap: 5rem);
+
+    h1 {
+        font-size: var(--font-size-xl);
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .slider__container {
+
+
+        .slider {
+            width: 75%;
+            height: 100%;
+            margin: 0 auto;
+
+            .slide {
+
+            }
+        }
+
+        
+    }
+}
