@@ -14,15 +14,42 @@
     }
 
     .slider__container {
+        width: 75%;
+        height: 100%;
+        margin: 0 auto;
 
+     
 
         .slider {
-            width: 75%;
-            height: 100%;
+            width: 90%;
+            height: fit-content;
             margin: 0 auto;
+            position: relative;
+
+            .slider__nav {
+                position: absolute;
+                right: 10px;
+                z-index: 2;
+                bottom: 0px;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    padding: 12px;
+                    cursor: pointer;
+                   
+                }
+
+                svg {
+                    width: 50px;
+                    box-shadow: -0px -0px 5px 3px rgba(30, 39, 51, 0.4);
+                    border-radius: 50%;
+                }
+            }
+    
 
             .slide {
-
+           
             }
         }
 
