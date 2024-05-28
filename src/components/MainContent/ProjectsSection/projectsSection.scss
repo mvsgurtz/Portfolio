@@ -1,0 +1,33 @@
+@import "../../../styles/globalstyles.scss";
+
+.projects__content {
+    min-height: 100vh;
+    @include display($justify: center, $direction: column, $gap: 5rem);
+
+    h1 {
+        font-size: var(--font-size-xl);
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .project__list {
+        @include display($direction: column);
+        height: 650px;
+        width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .project__navigation {
+        @include display($justify: center,$align: center, $gap: 30px);
+        width: 650px;
+        height: 100%;
+
+        button {
+            border: none;
+            color: white;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}

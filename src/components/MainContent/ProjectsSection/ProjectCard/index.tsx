@@ -1,4 +1,5 @@
-import style from "./style.module.scss";
+import"./projectCard.scss";
+import { handleOnMove } from "./handleonmove";
 
 interface ProjectCardProps {
   projectImg: string;
@@ -6,6 +7,8 @@ interface ProjectCardProps {
   projectSkills: string[];
   projectLink: string;
   projectDescription: string;
+  Animation: boolean;
+  key: string;
 }
 
 export const ProjectCard = ({
@@ -14,51 +17,48 @@ export const ProjectCard = ({
   projectSkills,
   projectLink,
   projectDescription,
+  Animation,
+  key,
 }: ProjectCardProps) => {
+      
   return (
-    <li className={style.card__container}>
-      <div className={style.card__content}>
-        <div className={style.card__leftside}>
-          <img
-            className={style.card__image}
-            src={projectImg}
-            alt={projectName}
-          />
-          <div className={style.skills__container}>
-            {projectSkills.map((imageName, index) => (
-              <img
-                className={style.skill__image}
-                key={index}
-                src={imageName}
-                alt={`Imagem ${index}`}
-              />
-            ))}
-          </div>
+    <li key={key} onMouseMove={(e: React.MouseEvent<HTMLLIElement>) => handleOnMove(e)} className="project__item visible">
+      <div className={`card ${Animation ? "left__animation" : ""}`}> 
+        <div className="card__hover hover"></div>
+        <div className="header__info">
+          <span>Projeto</span>
+          <h1>{projectName}</h1>
+          <svg
+            className="github__icon bi bi-github"
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+          </svg>
         </div>
-        <div className={style.card__info}>
-          <div className={style.card__introduction}>
-            <h2>{projectName}</h2>
-            <p>{projectDescription}</p>
-          </div>
-          <a href={projectLink}>Go to Website</a>
+        <p>{projectDescription}</p>
+        <div className="skills__content">
+          {projectSkills.map((imageName, index) => (
+            <img
+              className="skill__image"
+              key={index}
+              src={imageName}
+              alt={`Imagem ${index}`}
+            />
+          ))}
         </div>
       </div>
-
-      {/* <div className={style.card__content}>
-        <img className={style.card__image} src={projectImg} alt={projectName} />
-        <div className={style.card__info}>
-          <div className={style.card__introduction}>
-            <h2>{projectName}</h2>
-            <div className={style.skills__container}>
-              {projectSkills.map((imageName, index) => (
-                <img className={style.skill__image} key={index} src={imageName} alt={`Imagem ${index}`} />
-              ))}
-            </div>
-            <a href={projectLink}>Go to Website</a>
-          </div>
-          <p>{projectDescription}</p>
+      <div className={`project__image ${Animation ? "right__animation" : ""}`}>
+        <div className="image__website">
+          <a href={projectLink}>
+            <img src={projectImg} alt=""></img>
+          </a>
+          <span>Go to Website</span>
         </div>
-      </div> */}
+      </div>
     </li>
   );
 };
